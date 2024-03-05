@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://forworksmk.github.io/sitemap.xml
+Sitemap: https://forworksmk.github.io//sitemap.xml
