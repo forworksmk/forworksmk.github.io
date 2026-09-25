@@ -2,10 +2,14 @@
 ---
 <div class="row">
   {% if site.enable_publication_thumbnails %}
-    <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
+    <div class="{% if entry.preview %}col-sm-4 preview{% else %}col-sm-2 abbr{% endif %}">
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+        {% elsif entry.preview contains '.mp4' or entry.preview contains '.webm' %}
+          <video class="preview z-depth-1 rounded" autoplay loop muted playsinline
+                src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}">
+          </video>
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
           {%

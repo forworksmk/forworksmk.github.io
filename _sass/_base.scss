@@ -680,8 +680,8 @@ footer.sticky-bottom {
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    margin-bottom: 0.5rem;
+    text-align: left;
   }
 
   ol.bibliography {
@@ -692,10 +692,20 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
+      // .preview {
+      //   width: 100%;
+      //   min-width: 80px;
+      //   max-width: 200px;
+      // }
+
+      // .preview {
+      //     width: 100%;
+      //     max-width: 500px;   // 원하는 최대 크기
+        
+      // }
+      .preview video,
+      .preview img {
         width: 100%;
-        min-width: 80px;
-        max-width: 200px;
       }
 
       .abbr {
@@ -740,6 +750,7 @@ footer.sticky-bottom {
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+          font-weight: bold;
         }
 
         > span.more-authors {
